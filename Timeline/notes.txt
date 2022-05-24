@@ -1,0 +1,26 @@
+RPI: REMEMBER-Dont have to have everything in one arduino programs
+rpi may upload different sketch dynamically;
+APP:multiple programs can be stored in localStorage or inApp db
+
+ARDU: if slowing down execution, each keyframe value max and acc when executed needs to be multiplied by slowdown factor
+ARDU:  //TODO:
+        // if keyframe has target pos, take current pos minus target - distance to go
+        // and check if time divided by steps to go is over max_speed
+
+Ardu:    //if acc = 0 and prev direction is same
+    // maybe: array of type of keyframe transition- with or without decel
+    //then switch to runSpeedToPosition
+Ardu: // one command to go back to starting position
+// one command to pause mid prg - 
+problem - time wont stop and accelStepper may update wrong after pause
+//is calculating using micros() so modify class?
+// test first without the class modification
+// so do command that just flips the isRunning
+Ardu: //IF IN REVERSE - SHOULD IT READ CUR POS BUT PREV ACCEL etc.? acc[p] but pos[p-1]
+ARDU: right now its just series of target position and not keyframes
+    keyframes are in time, and may need TimerEvents (one stepper starts moving while othe is on the move)
+ARDU_APP_GENERAL:
+    MPU accelerometer: second arduino with accelerometers allowing to steer camera immediately by gestures
+      
+
+      SAVE TEACH AS PROG
